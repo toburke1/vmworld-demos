@@ -5,7 +5,7 @@
     prefix: newvm
     count: 1
     padding: 3
-    vmware_template: template_el7
+    vmware_template: template_coreos7
   tasks:
     - name: create the instance
       vmware_guests:
