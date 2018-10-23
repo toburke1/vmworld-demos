@@ -2,8 +2,8 @@
   connection: local
   gather_facts: False
   vars:
-    guest_name: newvm001
-    vmware_template: template_el7
+    guest_name: centos001
+    vmware_template: template_centos7
   tasks:
 
     - name: create the instance
@@ -18,8 +18,8 @@
         vm_extra_config:
           folder: testvms
         esxi:
-          datacenter: datacenter1
-          hostname: 172.16.66.128
+          datacenter: DC1
+          hostname: 192.168.60.10
 
     - name: loop until the guest has an IP address
       vsphere_guest:
